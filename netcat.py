@@ -54,8 +54,8 @@ def listen(self):
     while True:
         client_socket, _ = self.socket.accept()
 
-       client_thread = threading.Thread(target=self.handle, args=(client_socket,))
-       client_thread.start()
+        client_thread = threading.Thread(target=self.handle, args=(client_socket,))
+        client_thread.start()
 
 def handle(self, client_socket):
     if self.args.execute:
